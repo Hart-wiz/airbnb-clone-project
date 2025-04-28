@@ -86,3 +86,106 @@ The backend for the Airbnb Clone project is designed to provide a robust and sca
 - A **User** can write multiple **Reviews** for different **Properties**.
 - A **Property** can have multiple **Reviews**.
 - Each **Payment** is linked to one **Booking** and one **User**.
+
+## Features Overview
+
+### 1. API Documentation
+
+- **OpenAPI Standard:** The backend APIs are documented using the OpenAPI standard to ensure clarity and ease of integration.
+- **Django REST Framework:** Provides a comprehensive RESTful API for handling CRUD operations on user and property data.
+- **GraphQL:** Offers a flexible and efficient query mechanism for interacting with the backend.
+
+### 2. User Authentication
+
+- **Endpoints:** `/users/`, `/users/{user_id}/`
+- **Features:** Register new users, authenticate, and manage user profiles.
+
+### 3. Property Management
+
+- **Endpoints:** `/properties/`, `/properties/{property_id}/`
+- **Features:** Create, update, retrieve, and delete property listings.
+
+### 4. Booking System
+
+- **Endpoints:** `/bookings/`, `/bookings/{booking_id}/`
+- **Features:** Make, update, and manage bookings, including check-in and check-out details.
+
+### 5. Payment Processing
+
+- **Endpoints:** `/payments/`
+- **Features:** Handle payment transactions related to bookings.
+
+### 6. Review System
+
+- **Endpoints:** `/reviews/`, `/reviews/{review_id}/`
+- **Features:** Post and manage reviews for properties.
+
+### 7. Database Optimizations
+
+- **Indexing:** Implement indexes for fast retrieval of frequently accessed data.
+- **Caching:** Use caching strategies to reduce database load and improve performance.
+
+## API Security
+
+### Key Security Measures
+
+- **Authentication:**
+  - Implement secure login systems using tokens (e.g., JWT).
+  - Ensures that only verified users can access protected endpoints.
+- **Authorization:**
+
+  - Enforce role-based access control (RBAC) to restrict actions based on user roles (e.g., admin, regular user).
+  - Prevents unauthorized users from performing sensitive operations.
+
+- **Rate Limiting:**
+
+  - Set limits on the number of API requests a user or IP address can make within a given time.
+  - Protects the API from abuse, brute-force attacks, and overloading.
+
+- **Data Encryption:**
+
+  - Use HTTPS to encrypt all data transmitted between the client and server.
+  - Safeguards sensitive information such as login credentials and payment details.
+
+- **Input Validation:**
+  - Validate all incoming data to prevent injection attacks (e.g., SQL injection, XSS).
+  - Maintains data integrity and security across the system.
+
+### Importance of Security in Key Project Areas
+
+- **User Data Protection:**
+
+  - Securing authentication and authorization mechanisms protects personal information like emails, passwords, and profiles from breaches.
+
+- **Payment Security:**
+
+  - Ensuring encryption and secure APIs prevents financial data from being intercepted or tampered with during transactions.
+
+- **Booking and Property Management:**
+
+  - Protecting booking operations and property listings ensures that only authorized users can modify or access sensitive property information.
+
+- **System Stability:**
+  - Implementing rate limiting and input validation helps maintain the stability and integrity of the backend against malicious attacks.
+
+## CI/CD Pipeline
+
+### What is CI/CD?
+
+- **Continuous Integration (CI):** Automatically tests and integrates code changes into the main branch to catch errors early and maintain code quality.
+- **Continuous Deployment (CD):** Automatically deploys validated changes to production or staging environments, ensuring faster and more reliable releases.
+
+### Importance for This Project
+
+- **Faster Development Cycles:** Automated testing and deployment speed up the feedback and release process.
+- **Higher Code Quality:** Continuous testing helps catch bugs early, reducing issues in production.
+- **Reliability:** Automated deployments reduce the risks associated with manual errors during release.
+- **Consistency:** Ensures that code moves through development, testing, and deployment stages in a consistent and repeatable way.
+
+### Tools Used
+
+- **GitHub Actions:** Automates testing, building, and deployment workflows.
+- **Docker:** Creates consistent containerized environments for development, testing, and production.
+- **Docker Compose:** Manages multi-container applications (e.g., backend API, database) during development and testing.
+- **PostgreSQL:** Used within the CI pipeline for database integration testing.
+- **Coverage Tools (e.g., Coverage.py):** Measures code coverage during automated tests.
