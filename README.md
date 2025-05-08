@@ -87,7 +87,7 @@ The backend for the Airbnb Clone project is designed to provide a robust and sca
 - A **Property** can have multiple **Reviews**.
 - Each **Payment** is linked to one **Booking** and one **User**.
 
-## Features Breakdown
+## Feature Breakdown
 
 ### 1. API Documentation
 
